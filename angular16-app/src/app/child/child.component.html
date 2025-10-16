@@ -1,0 +1,14 @@
+<p>child works!</p>
+<h2>{{"Hai " + firstName + " you are " +age + " years old.."}}</h2>
+<button (click)="onClick()">Click me</button>
+
+<ng-content select=".header"></ng-content>
+
+
+<h3>ngClass,ngStyle</h3>
+<!-- {{colorToDisplay}} -->
+<input type="text" placeholder="color" [(ngModel)]="textcolor"><br>
+<input type="number" placeholder="fontsize" [(ngModel)]="fontsize"><br>
+<button (click)="toggleHighlight()">{{isHighlighted? "removeHighlight":"Add highlight"}}</button>
+<p [ngStyle]="{'color':textcolor,'font-size':fontsize+'px'}" [ngClass]="{'highlight':isHighlighted}">This text will change to specified color and size ..</p>
+    

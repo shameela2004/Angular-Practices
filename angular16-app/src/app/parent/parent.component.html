@@ -1,0 +1,39 @@
+<!-- <button (click)="changeLogin()">
+    <div *ngIf="login ;else notLoggedIn">Logout</div> -->
+<!-- <div *ngIf="!login">Login</div> -->
+ <!-- <ng-template #notLoggedIn>
+    <div>Loginnnnnnnnnnnnnnnnn</div>
+ </ng-template>
+</button>
+<h4>ngSwich </h4>
+<div [ngSwitch]="color">NgSwitch
+    <p *ngSwitchCase="'red'">Red selected</p>
+        <p *ngSwitchCase="'green'">Green selected</p>
+            <p *ngSwitchDefault>Invalid color</p>
+
+</div>
+<h5>ngFor</h5>
+<div>
+    
+    <li *ngFor="let c of colors; index as i;let first=first; let last = last;let even=even;let odd=odd;">
+        <span [style.color]="first?'yellow':last?'blue':odd?'green':even?'red':'black'">
+        {{i+1}}:{{c}}
+        </span>
+    </li>
+</div>
+
+
+
+<p>parent works!</p>
+<h3>{{showMessage ? message: null}}</h3>
+<app-child [firstName]='name' [age]='age' (clickMessage)="receiveMessage($event)"></app-child> -->
+
+
+
+
+
+<app-child>
+    <p class="header">This is ng-content</p>
+    <p class="root">This is ng-content 4</p>
+</app-child>
+<button (click)="onClick()">Click this </button>

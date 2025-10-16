@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-hello',
@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./hello.component.css']
 })
 export class HelloComponent {
+      sayHello(){
+        alert("hello from this hello componnet")
+      }
+      @Input() name:string=''
+      @Input() age:number=0;
+      @Output() greet= new EventEmitter<string>();
+
+      onClick(){
+        this.greet.emit("Haiii hello welcome ")
+      }
 
 }
