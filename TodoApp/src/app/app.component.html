@@ -1,9 +1,0 @@
-<input type="text" [(ngModel)]="task">
-<button (click)="Add()">{{editIndex!= null?'edit' :'add'}}</button>
-<h2>To Do LIst</h2>
-<ol>
-  <li *ngFor="let t of tasks;let i=index">{{t}}
-    <button (click)="delete(i)">Delete</button>
-    <button (click)="update(i)">Edit</button>
-  </li>
-</ol>
